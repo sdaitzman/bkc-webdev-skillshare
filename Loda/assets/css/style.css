@@ -839,6 +839,23 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     text-transform: uppercase;
 }
 
+.contactcircles{
+    width:55%;
+    margin:auto;
+}
+.contactcircles a{
+    text-decoration: none;
+}
+.circle{
+    width:120px;
+    height:120px;
+    position:relative;
+    margin-left:3%;
+    margin-right:3%;
+    margin-top:8%;
+    margin-bottom:0%;
+}
+
 /* ====MESSAGE FOR SUCCES==== */
 
 #message { 

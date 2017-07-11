@@ -60,27 +60,51 @@ jQuery(window).load(function() {
 
   $('body').scrollspy({ offset: 200, target: '.navigation' });
 
-  });
+  
 
 
 //----- HIDE PADDER COLUMN WHEN NOT MOBILE ---//
 var viewportWidth = $(window).width();
 if (viewportWidth > 770){
-    $("#padder").css("display", "none")
+
+    $("#padder").css("display", "none");
+    $(".p-margin").css("text-align","left")
     }
-    else{
+else{
     $("#padder").css("display", "initial")
+    $(".p-margin").css("text-align","center")
+
     }
 $(window).resize(function() {
     var viewportWidth = $(window).width();
     if (viewportWidth > 770){
-    $("#padder").css("display", "none")
+
+    $("#padder").css("display", "none");
+    $(".p-margin").css("text-align","left")
     }
     else{
-    $("#padder").css("display", "initial")
+    $("#padder").css("display", "initial");
+    $(".p-margin").css("text-align","center")
+
     }
-})
+    
+});
 
+//----- HIDE LOGO UNTIL SCROLLED ---//
+var scrollpct = $(window).scrollTop(); 
+console.log(scrollpct)
+if (scrollpct < 150){
+    $("#logo").css("display", "none");
+} else {
+    $("#logo").css("display", "initial");
+}
+$(window).scroll(function() {
+var scrollpct = $(window).scrollTop(); 
+if (scrollpct < 150){
+    $("#logo").css("display", "none");
+} else {
+    $("#logo").css("display", "initial");
+}
+});
 
-
-
+});
