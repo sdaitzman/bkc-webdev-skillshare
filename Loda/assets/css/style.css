@@ -1,38 +1,60 @@
+/*
+
+This is a CSS file.
+
+This block is a comment. Comments allow you to write additional text inside your CSS for documentation or other purposes.
+
+CSS allows you to select elements and apply specific styles to them.
+
+You can change the appearance and layout of elements with properties like color, font-family and font-size, width, height, margin and padding.
+
+*/
+
+
+
+
+/* This is a selector. the text "html" means that we are addressing the <html></html> element.
+This means that the statements inside the curly braces {} are referring to the <html></html> element. */
 html{
-	position: relative;
-	margin: 25px 0px;
+	position: relative; /* sets the positioning type of the element to relative */
+	margin: 25px 0px; /* sets the margins on the top and bottom to 25px, or 25 pixels, and on the left and right to 0px */
 
 }
 
 body{
-	background: transparent;
+	background: transparent;  /* the background property also accepts colors and images, like when we specify background-color below... */
 	position: relative;
 	background-color: #ededed; /*you can search sites like http://www.color-hex.com/ to find other color codes*/
-    overflow:hidden;
+  overflow:hidden; /* hides any content that may extend past the end of the page */
 }
 section{
-    max-width:100%;
-    overflow-x:hidden;
+  max-width:100%; /* allows the element to expand up to 100% window width */
+  overflow-x:hidden;
 }
 
-//links that are in focus
+/* links that are in focus */
 a:focus {
 	outline: 0;
 	text-decoration: none;
 }
 
-//styling when you hover over a link
+/* styling when you hover over a link */
+/* the :hover selector applies styles to the element when hovered */
 a:hover{
 	text-decoration: none;
 }
 
+
+/* you can refer to an element with class attribute <someElement class="aClassName"></someElement> */
+/* in CSS, the selector for that class would be .aClassName */
+/* here, we select all elements with class "margin-lr" */
 .margin-lr{
-	position: fixed;
+	position: fixed; /* fixed position elements are not affected by scrolling */
 	width: 25px;
 	top:-25px;
-	height: calc(100% + 25px);
+	height: calc(100% + 25px); /* calc, a new CSS feature, does math */
 	background-color: #ededed;
-	z-index: 999;
+	z-index: 999; /* this controls an element's layer */
 }
 
 .margin-left{
@@ -62,7 +84,7 @@ a:hover{
 /*----- Page Loader -----*/
 
 #loader {
-    background: #fff;
+    background: #fff; /* this is the same as white */
     bottom: 0;
     height: 100%;
     left: 0;
@@ -73,6 +95,10 @@ a:hover{
     z-index: 9999;
 }
 
+
+/* the # is used for selecting by the id attribute */
+/* chaining selectors with a space in between selects a child element */
+/* this selects any <h3></h3> element inside an element with id="loader" */
 #loader h3{
 	font-family: "Lora", sans-serif;
 	font-size: 14px;
